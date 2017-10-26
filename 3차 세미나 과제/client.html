@@ -1,0 +1,21 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <script src = '/socket.io/socket.io.js'></script>
+  <script>
+    const socket = io();
+    socket.on('connect', function(){
+      console.log("서버에 접속했습니다.");
+    });
+  </script>
+</head>
+<body>
+  <h1>HTTP 웹에서 소켓 통신하기</h1>
+  <script>
+    socket.on('message',function(message){
+      document.writeln(message);
+      document.writeln('<br>');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+ <head>
+   <meta charset = "utf-8" />
+   <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+ </head>
+ <body>
+   <h1>포켓몬 도감</h1>
+   <strong>이름, 특성, 이미지</strong><br />
+   <% for(var i = 0; i<array.length; i++){%>
+     <%=array[i].name%>, <%=array[i].charactor%>, <img src='images/<%=array[i].name%>'><br>
+   <% } %>
+  <form action='/pokemon/complete' method='POST' enctype="multipart/form-data">
+    <table>
+      <tr>
+        <td>이름 : </td>
+        <td><input type="text" id="name" name="name" placeholder="이름"></td>
+      </tr>
+      <tr>
+        <td>특성 : </td>
+        <td><input type="text" id="charactor" name="charactor" placeholder="특성"></td>
+      </tr>
+       <tr>
+        <td>이미지업로드 : </td>
+         <td><input type="file" name="pic" accept="image/*"></td>
+       </tr>
+      <tr>
+        <td style="text-align:center" colspan="2"><input type="submit" value="저장" /></td>
+      </tr>
+    </table>
+  </form>
+ </body>
+</html>
