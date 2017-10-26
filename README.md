@@ -1,3 +1,3 @@
-# SOPT21 Android Kotlin report
+# SOPT20 server node.js report
 
-sopt 21기 안드로이드 파트 과제 (코틀린)
+sopt 20기 서버 파트 과제(node.js)
